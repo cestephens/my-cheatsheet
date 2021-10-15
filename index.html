@@ -8,259 +8,304 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="content">
-      <h1>CSS Positioning and Display Reference</h1>
-    <br>
-    <p>
-      This page is designed to be a quick reference for many types of CSS properties and values that relate to positioning elements. The list is not complete and only contains some of the simpler properties/ values. To extend your knowledge there is some great information on flex and grid posistioning <a href="https://webdesign.tutsplus.com/articles/flexbox-vs-css-grid-which-should-you-use--cms-30184">here</a>.
-    </p>
-    <aside class="article-nav">
-      <h2>Contents</h2>
-      <ol>
-        <li>
-          <a href="#positioning-properties">Positioning Properties</a>
-          <ol class="sublist">
-            <li><a href="#position-type">Position Type</a></li>
-            <li><a href="#offsets">Offsets</a></li>
-          </ol>
-        </li>
-        <li><a href="#display-property">Display Property</a></li>
-        <li><a href="#float-property">Float Property</a></li>
-        <li><a href="#clear-property">Clear Property</a></li>
-      </ol>
-    </aside>
-    <section id="positioning-properties">
-      <h2>Positioning Properties</h2>
-      <p>
-        The position type and offset properties are used together to define the
-        location of and element on the page.
-      </p>
-      <section id="position-type">
-        <h3>Position type</h3>
+    <div class="main-content">
+      <aside class="article-nav">
+        <h2>Contents</h2>
+        <ol>
+          <li>
+            <a href="#positioning-properties">Positioning Properties</a>
+            <ol class="sublist">
+              <li><a href="#position-type">Position Type</a></li>
+              <li><a href="#offsets">Offsets</a></li>
+            </ol>
+          </li>
+          <li><a href="#display-property">Display Property</a></li>
+          <li><a href="#float-property">Float Property</a></li>
+          <li><a href="#clear-property">Clear Property</a></li>
+        </ol>
+      </aside>
+      <div class="content">
+        <h1>CSS Positioning and Display Reference</h1>
+        <br />
         <p>
-          The <code>position</code> property specifies the position type for an
-          element.
+          This page is designed to be a quick reference for many types of CSS
+          properties and values that relate to positioning elements. The list is
+          not complete and only contains some of the simpler properties/ values.
+          To extend your knowledge there is some great information on flex and
+          grid posistioning
+          <a
+            href="https://webdesign.tutsplus.com/articles/flexbox-vs-css-grid-which-should-you-use--cms-30184"
+            >here</a
+          >.
         </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Value</th>
-              <th>Description</th>
-              <th>When you scroll?</th>
-              <th>What's left where it was?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>static</code></td>
-              <td>
-                Default value. Elements render in order, as they appear in the
-                document flow
-              </td>
-              <td>Goes with the flow</td>
-              <td>Err, it is where it is</td>
-            </tr>
-            <tr>
-              <td><code>relative</code></td>
-              <td>
-                Used in combo with offset properties to position the element
-                relative to where it's own static position would have been
-              </td>
-              <td>Goes with the flow</td>
-              <td>A gap</td>
-            </tr>
-            <tr>
-              <td><code>absolute</code></td>
-              <td>
-                Used in combo with offsets properties, the element is positioned
-                relative to its first positioned (not static) ancestor element
-              </td>
-              <td>Goes with the flow</td>
-              <td>No gap</td>
-            </tr>
-            <tr>
-              <td><code>fixed</code></td>
-              <td>
-                Used in combo with offset properties to posistion element
-                relative to the viewport.
-              </td>
-              <td>Sticks around relative to the view port</td>
-              <td>No gap</td>
-            </tr>
-            <tr>
-              <td><code>-webkit-sticky</code></td>
-              <td>
-                The object scrolls with the container until it reaches the
-                offset defined with offset properties. Then it sticks.
-              </td>
-              <td>Goes with the flow, then sticks</td>
-              <td>A gap</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <br>
-      <section id="offsets">
-        <h3>Offsets</h3>
-        <p>
-          I have grouped these properties as "offset" properties as they are
-          used to define the offset from the default position based on an
-          element's position type.
-        </p>
-        <p>
-          These properties define which edge you would like to offset from:
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>left:</code></td>
-              <td>Sets the left margin edge for a positioned element</td>
-            </tr>
-            <tr>
-              <td><code>right:</code></td>
-              <td>Sets the right margin edge for a positioned element</td>
-            </tr>
-            <tr>
-              <td><code>top:</code></td>
-              <td>Sets the top margin edge for a positioned element</td>
-            </tr>
-            <tr>
-              <td><code>bottom:</code></td>
-              <td>Sets the bottom margin edge for a positioned element</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          The above offset properties can contain the following value types:
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Value</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>auto</code></td>
-              <td>
-                Lets the browser calculate the edge position. This is default
-              </td>
-            </tr>
-            <tr>
-              <td><i>absolute length</i></td>
-              <td>
-                Sets the edge position in px, cm, etc. Negative values are
-                allowed
-              </td>
-            </tr>
-            <tr>
-              <td><i>% length</i></td>
-              <td>
-                Sets the edge position in % of containing element. Negative
-                values are allowed
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </section>
-    <br>
-    <section id="display-property">
-       <h2>Display Property</h2>
-       <p>The <code>display</code> property determine the type of block the element takes when rendered.</p>
-       <table>
-        <thead>
-          <tr>
-            <th>Value</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>block</code></td>
-            <td>Displays an element as a block element (like <code>&lt;p&gt;</code>). It starts on a new line, and takes up the whole width</td>
-          </tr>
-          <tr>
-            <td><code>inline</code></td>
-            <td>Displays an element as an inline element (like <code>&lt;span&gt;</code>). Any height and width properties will have no effect</td>
-          </tr>
-          <tr>
-            <td><code>inline-block</code></td>
-            <td>Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values</td>
-          </tr>
-          <tr>
-            <td><code>none</code></td>
-            <td>Element is removed</td>
-          </tr>
-        </tbody>
-       </table>
-    </section>
-    <br>
-    <section id="float-property">
-        <h2>Float Property</h2>
-        <p>The <code>float</code> property determines where an element will sit in its container.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Value</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>right</code></td>
-              <td>The element floats to the right of its container</td>
-            </tr>
-            <tr>
-              <td><code>left</code></td>
-              <td>The element floats to the left of its container</td>
-            </tr>
-            <tr>
-              <td><code>right</code></td>
-              <td>The default. The element does not float</td>
-            </tr>
-          </tbody>
-         </table>
-    </section>
-    <br>
-    <section id="clear-property">
-        <h2>Clear Property</h2>
-        <p>The <code>clear</code> property specifies what should happen with the element that is next to a floating element.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Value</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>none</code></td>
-              <td>Default. The element is not pushed below left or right floated elements</td>
-            </tr>
-            <tr>
-              <td><code>left</code></td>
-              <td>The element is pushed below left floated elements</td>
-            </tr>
-            <tr>
-              <td><code>right</code></td>
-              <td>The element is pushed below right floated elements</td>
-            </tr>
-            <tr>
-              <td><code>both</code></td>
-              <td>The element is pushed below both left and right floated elements</td>
-            </tr>
-          </tbody>
-         </table>
-    </section>
+        <br />
+        <hr>
+        <section id="positioning-properties">
+          <h2>Positioning Properties</h2>
+          <p>
+            The position type and offset properties are used together to define
+            the location of and element on the page.
+          </p>
+          <section id="position-type">
+            <h3>Position type</h3>
+            <p>
+              The <code>position</code> property specifies the position type for
+              an element.
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Value</th>
+                  <th>Description</th>
+                  <th>When you scroll?</th>
+                  <th>What's left where it was?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>static</code></td>
+                  <td>
+                    Default value. Elements render in order, as they appear in
+                    the document flow
+                  </td>
+                  <td>Goes with the flow</td>
+                  <td>Err, it is where it is</td>
+                </tr>
+                <tr>
+                  <td><code>relative</code></td>
+                  <td>
+                    Used in combo with offset properties to position the element
+                    relative to where it's own static position would have been
+                  </td>
+                  <td>Goes with the flow</td>
+                  <td>A gap</td>
+                </tr>
+                <tr>
+                  <td><code>absolute</code></td>
+                  <td>
+                    Used in combo with offsets properties, the element is
+                    positioned relative to its first positioned (not static)
+                    ancestor element
+                  </td>
+                  <td>Goes with the flow</td>
+                  <td>No gap</td>
+                </tr>
+                <tr>
+                  <td><code>fixed</code></td>
+                  <td>
+                    Used in combo with offset properties to posistion element
+                    relative to the viewport.
+                  </td>
+                  <td>Sticks around relative to the view port</td>
+                  <td>No gap</td>
+                </tr>
+                <tr>
+                  <td><code>-webkit-sticky</code></td>
+                  <td>
+                    The object scrolls with the container until it reaches the
+                    offset defined with offset properties. Then it sticks.
+                  </td>
+                  <td>Goes with the flow, then sticks</td>
+                  <td>A gap</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <br />
+          <section id="offsets">
+            <h3>Offsets</h3>
+            <p>
+              I have grouped these properties as "offset" properties as they are
+              used to define the offset from the default position based on an
+              element's position type.
+            </p>
+            <p>
+              These properties define which edge you would like to offset from:
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>left:</code></td>
+                  <td>Sets the left margin edge for a positioned element</td>
+                </tr>
+                <tr>
+                  <td><code>right:</code></td>
+                  <td>Sets the right margin edge for a positioned element</td>
+                </tr>
+                <tr>
+                  <td><code>top:</code></td>
+                  <td>Sets the top margin edge for a positioned element</td>
+                </tr>
+                <tr>
+                  <td><code>bottom:</code></td>
+                  <td>Sets the bottom margin edge for a positioned element</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              The above offset properties can contain the following value types:
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Value</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>auto</code></td>
+                  <td>
+                    Lets the browser calculate the edge position. This is
+                    default
+                  </td>
+                </tr>
+                <tr>
+                  <td><i>absolute length</i></td>
+                  <td>
+                    Sets the edge position in px, cm, etc. Negative values are
+                    allowed
+                  </td>
+                </tr>
+                <tr>
+                  <td><i>% length</i></td>
+                  <td>
+                    Sets the edge position in % of containing element. Negative
+                    values are allowed
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <br />
+          <hr>
+        </section>
+        <section id="display-property">
+          <h2>Display Property</h2>
+          <p>
+            The <code>display</code> property determine the type of block the
+            element takes when rendered.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Value</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>block</code></td>
+                <td>
+                  Displays an element as a block element (like
+                  <code>&lt;p&gt;</code>). It starts on a new line, and takes up
+                  the whole width
+                </td>
+              </tr>
+              <tr>
+                <td><code>inline</code></td>
+                <td>
+                  Displays an element as an inline element (like
+                  <code>&lt;span&gt;</code>). Any height and width properties
+                  will have no effect
+                </td>
+              </tr>
+              <tr>
+                <td><code>inline-block</code></td>
+                <td>
+                  Displays an element as an inline-level block container. The
+                  element itself is formatted as an inline element, but you can
+                  apply height and width values
+                </td>
+              </tr>
+              <tr>
+                <td><code>none</code></td>
+                <td>Element is removed</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <hr>
+        </section>
+        <section id="float-property">
+          <h2>Float Property</h2>
+          <p>
+            The <code>float</code> property determines where an element will sit
+            in its container.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Value</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>right</code></td>
+                <td>The element floats to the right of its container</td>
+              </tr>
+              <tr>
+                <td><code>left</code></td>
+                <td>The element floats to the left of its container</td>
+              </tr>
+              <tr>
+                <td><code>right</code></td>
+                <td>The default. The element does not float</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <hr>
+        </section>
+        <section id="clear-property">
+          <h2>Clear Property</h2>
+          <p>
+            The <code>clear</code> property specifies what should happen with
+            the element that is next to a floating element.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Value</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>none</code></td>
+                <td>
+                  Default. The element is not pushed below left or right floated
+                  elements
+                </td>
+              </tr>
+              <tr>
+                <td><code>left</code></td>
+                <td>The element is pushed below left floated elements</td>
+              </tr>
+              <tr>
+                <td><code>right</code></td>
+                <td>The element is pushed below right floated elements</td>
+              </tr>
+              <tr>
+                <td><code>both</code></td>
+                <td>
+                  The element is pushed below both left and right floated
+                  elements
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <hr>
+        </section>
+      </div>
     </div>
-    
   </body>
 </html>

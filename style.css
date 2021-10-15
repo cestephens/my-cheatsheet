@@ -1,82 +1,113 @@
 aside.article-nav {
-    //background-color: gainsboro;
+  background-color:aliceblue;
+  padding: 0px 20px;
+  height: 100vh;
+  max-width: 150px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  position: -webkit-sticky; /* for Safari users */
+  position: sticky;
+  border-right: 4px dotted gainsboro;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: aliceblue;
-    color: darkslategray;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aliceblue;
+  color: darkslategray;
+  margin: 0;
+}
+
+div.content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px 20px;
 }
 
 code {
-    background-color: white;
-    font-family: "Lucida Console", Courier, monospace;
-    color: black;
+  background-color: white;
+  font-family: "Lucida Console", Courier, monospace;
+  color: black;
+}
+
+hr {
+  border-top: 4px dotted gainsboro;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
+  margin-top: 30px;
 }
 
 h3 {
-    text-align: center;
+  text-align: center;
 }
 
 h4 {
-    text-align: center;
+  text-align: center;
 }
 
 h5 {
-    text-align: center;
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
 }
 
 p {
-    line-height: 1.5;
+  line-height: 1.5;
+}
+
+ol {
+  padding-inline-start: 20px;
 }
 
 ol.sublist {
-    list-style-type: upper-roman;
+  list-style-type: upper-roman;
 }
 
 table {
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    border-spacing: 0;
-    line-height: 1.5;
-    width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 1.5;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 tbody tr:nth-child(odd) {
-    background-color: gainsboro;
+  background-color: gainsboro;
 }
 
 td {
-    padding: 5px;
+  padding: 5px;
 }
 
 th {
-    padding: 5px;
+  padding: 5px;
 }
 
 thead tr {
-    border-bottom: 1pt solid black;
-    text-align: left;
-    background-color: grey;
-    color: aliceblue;
+  border-bottom: 1pt solid black;
+  text-align: left;
+  background-color: grey;
+  color: aliceblue;
 }
 
 ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    line-height: 1.5;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
 }
